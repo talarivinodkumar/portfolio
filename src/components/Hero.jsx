@@ -60,12 +60,6 @@ const Hero = () => {
                     HIRE ME <i className="fa-solid fa-paper-plane" style={{ marginLeft: '10px' }}></i>
                   </MagneticButton>
                 </a>
-                <a href="/n.pdf" download="n.pdf" target="_blank">
-                  <MagneticButton className="button-pro" style={{ background: 'rgba(255,255,255,0.05)', boxShadow: 'none' }}>
-                    <i className="fa fa-download" style={{ marginRight: '10px' }}></i>
-                    DOWNLOAD CV
-                  </MagneticButton>
-                </a>
               </div>
             </motion.div>
           </div>
