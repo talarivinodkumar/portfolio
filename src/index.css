@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap');
+
+:root {
+  font-family: 'Poppins', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  color: #ffffff;
+  background-color: #020617; /* Deep Midnight */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Professional 'Midnight & Cyan' Gradient Background --- */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #1e293b, #020617, #020617);
+  background-size: 100% 100%;
+  overflow-x: hidden;
+  cursor: none; /* Hide default cursor for custom glow */
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* --- Glassmorphism (Re-styled for Navy/Cyan) --- */
+.glass {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+}
+
+.navbar {
+  background: rgba(2, 6, 23, 0.8) !important;
+  backdrop-filter: blur(12px);
+  margin-bottom: 0;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 0;
+  padding: 20px 0;
+}
+
+.navbar a {
+  color: #cbd5e1 !important;
+  font-weight: 600;
+  transition: 0.3s ease;
+  letter-spacing: 1px;
+}
+
+.navbar a:hover {
+  color: #06b6d4 !important;
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+}
+
+.jumbotron {
+  margin: 0;
+  overflow: hidden;
+  background: transparent !important;
+  padding: 120px 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+/* --- Professional Cyan Gradient & Glow Text --- */
+.gradient-text {
+  font-size: 80px;
+  text-transform: uppercase;
+  font-weight: 950;
+  background: linear-gradient(90deg, #06b6d4, #10b981, #06b6d4);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: animate-gradient 4s linear infinite;
+}
+
+@keyframes animate-gradient {
+  to { background-position: 200%; }
+}
+
+/* --- Profile Image Float --- */
+.profile-img {
+  border: 5px solid rgba(6, 182, 212, 0.1);
+  box-shadow: 0 0 60px rgba(6, 182, 212, 0.15);
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-25px) rotate(2deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* --- Custom Cursor (Cyan Glow) --- */
+.cursor-glow {
+  width: 20px;
+  height: 20px;
+  background: #06b6d4;
+  position: fixed;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: screen;
+  box-shadow: 0 0 25px rgba(6, 182, 212, 0.8), 0 0 50px rgba(6, 182, 212, 0.4);
+  transition: transform 0.15s ease-out;
+}
+
+/* --- Professional Tech Buttons --- */
+.button-pro {
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+  color: #ffffff;
+  border: none;
+  padding: 16px 40px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.4s;
+  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.3);
+  display: inline-block;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.button-pro:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(6, 182, 212, 0.5);
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* --- Professional Project Cards (Midnight/Cyan) --- */
+.project-card {
+  background: rgba(30, 41, 59, 0.4);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 24px;
+  padding: 35px;
+  height: 480px; /* Fixed height for clean grid */
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-align: left;
+}
+
+.project-card:hover {
+  border-color: rgba(6, 182, 212, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.project-card .icon-box {
+  width: 60px;
+  height: 60px;
+  background: rgba(6, 182, 212, 0.1);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+  color: #06b6d4;
+  font-size: 24px;
+}
+
+.project-card h3 {
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.project-card p {
+  color: #94a3b8;
+  font-size: 15px;
+  line-height: 1.7;
+  flex-grow: 1;
+}
+
+/* --- Tech Badges --- */
+.badge-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.tech-badge {
+  background: rgba(6, 182, 212, 0.05);
+  color: #06b6d4;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px solid rgba(6, 182, 212, 0.1);
+}
+
+/* --- Scroll To Top --- */
+#scrollTop {
+  background: #06b6d4;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+}
+
+/* --- Footer --- */
+footer {
+  background: #020617;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.contact-icon {
+  color: #94a3b8 !important;
+  transition: 0.3s;
+}
+
+.contact-icon:hover {
+  color: #06b6d4 !important;
+  transform: scale(1.2);
+}
+
+/* --- WOW Features: Scroll Progress Bar --- */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #06b6d4, #10b981);
+  width: 0%;
+  z-index: 10001;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+  transition: width 0.1s ease-out;
+}
+
+/* --- WOW Features: Floating AI ChatBot --- */
+.chat-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: linear-gradient(135deg, #06b6d4, #0891b2);
+  border: none;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 9998;
+  box-shadow: 0 4px 20px rgba(6, 182, 212, 0.4);
+  transition: 0.3s;
+}
+
+.chat-btn:hover {
+  transform: scale(1.1) rotate(15deg);
+  box-shadow: 0 0 30px rgba(6, 182, 212, 0.6);
+}
+
+.chat-box {
+  position: fixed;
+  bottom: 100px;
+  right: 30px;
+  width: 320px;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+  z-index: 9998;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  animation: slideInUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes slideInUp {
+  from { transform: translateY(50px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.chat-header {
+  color: #06b6d4;
+  font-weight: 800;
+  font-size: 16px;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.chat-content {
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.chat-options {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.chat-option-btn {
+  background: rgba(6, 182, 212, 0.1);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  color: #06b6d4;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  text-align: left;
+  transition: 0.2s;
+}
+
+.chat-option-btn:hover {
+  background: rgba(6, 182, 212, 0.2);
+  transform: translateX(5px);
+}
+
+/* --- WOW Features: Mouse Trail --- */
+.trail {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: #06b6d4;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  box-shadow: 0 0 15px #06b6d4;
+  animation: fadeOutTrail 0.6s linear forwards;
+}
+
+@keyframes fadeOutTrail {
+  from { transform: scale(1); opacity: 0.8; }
+  to { transform: scale(0); opacity: 0; }
+}
+
+/* --- WOW Features: Modal --- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(2, 6, 23, 0.85);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10002;
+  padding: 20px;
+}
+
+.modal-content {
+  background: #0f172a;
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 30px;
+  width: 100%;
+  max-width: 800px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  padding: 50px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.modal-close {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.modal-close:hover {
+  color: #06b6d4;
+  transform: rotate(90deg);
+}
+
+/* --- Contact Form Styles --- */
+.contact-form {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  color: #cbd5e1;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.form-control-pro {
+  width: 100%;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+  border-radius: 12px;
+  padding: 15px 20px;
+  color: #ffffff;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-control-pro:focus {
+  border-color: #06b6d4;
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+  background: rgba(15, 23, 42, 0.8);
+}
+
+select.form-control-pro {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2306b6d4'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+  background-size: 16px;
+}
+
+
+
+.contact-icon-footer:hover {
+  color: #06b6d4 !important;
+  transform: translateY(-5px);
+}
+
+
+
